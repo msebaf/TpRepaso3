@@ -64,9 +64,9 @@ public class GalleryFragment extends Fragment {
         @Override
         public void onMapReady(@NonNull GoogleMap googleMap) {
             googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-            googleMap.addMarker(new MarkerOptions().position(ChangoMas).title("San Luis"));
-            googleMap.addMarker(new MarkerOptions().position(Aiello).title("ULP"));
-            googleMap.addMarker(new MarkerOptions().position(SupermercadoRey).title("ULP"));
+            googleMap.addMarker(new MarkerOptions().position(ChangoMas).title("Chango mas"));
+            googleMap.addMarker(new MarkerOptions().position(Aiello).title("Aiello"));
+            googleMap.addMarker(new MarkerOptions().position(SupermercadoRey).title("Supermercado Rey"));
             CameraPosition camPos=new CameraPosition.Builder()
                     .target(ChangoMas)
                     .zoom(15)
