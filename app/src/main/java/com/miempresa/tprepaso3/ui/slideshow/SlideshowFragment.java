@@ -24,6 +24,7 @@ private FragmentSlideshowBinding binding;
 
         final TextView textView = binding.textSlideshow;
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        Alert.mostrarDialogoSalida(getContext());
         return root;
     }
 
