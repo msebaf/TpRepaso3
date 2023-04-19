@@ -32,7 +32,7 @@ private HomeViewModel mv ;
 
         final TextView textView = binding.textHome;
         homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        mv = new HomeViewModel();
+        mv = new ViewModelProvider(HomeFragment.this).get(HomeViewModel.class);
         mv.getResultado().observe(getViewLifecycleOwner() , new Observer<String>() {
             @Override
             public void onChanged(String s) {

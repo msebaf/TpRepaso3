@@ -16,7 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.miempresa.tprepaso3.databinding.ActivityMenuBinding;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity  {
 
     private AppBarConfiguration mAppBarConfiguration;
 private ActivityMenuBinding binding;
@@ -32,6 +32,7 @@ private ActivityMenuBinding binding;
                 != PackageManager.PERMISSION_GRANTED){
             requestPermissions(new String[]{Manifest.permission.CALL_PHONE},1000);
         }
+
 
         setSupportActionBar(binding.appBarMenu.toolbar);
         binding.appBarMenu.fab.setOnClickListener(new View.OnClickListener() {
