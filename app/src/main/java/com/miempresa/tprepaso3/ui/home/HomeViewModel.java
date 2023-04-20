@@ -33,12 +33,13 @@ public class HomeViewModel extends AndroidViewModel {
         return resultado;
     }
 
-    public void llamar(Context context, String numeroTelefono) {
+    public void llamar(String numeroTelefono) {
 
     if (!numeroTelefono.isEmpty() && numeroTelefono.matches("\\d+")){
         Uri uri = Uri.parse("tel:" + numeroTelefono);
         Intent intent = new Intent(Intent.ACTION_CALL, uri);
-        context.startActivity(intent);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+         getApplication().getApplicationContext().startActivity(intent);
     }else{
         resultado.setValue("El numero no es correcto");
     }

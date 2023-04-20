@@ -23,7 +23,7 @@ private FragmentSlideshowBinding binding;
     View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         Alert.mostrarDialogoSalida(getContext());
         return root;
     }

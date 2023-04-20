@@ -45,7 +45,7 @@ private HomeViewModel mv ;
             @Override
             public void onClick(View v) {
 
-                mv.llamar(getContext() , binding.ptNumero.getText().toString());
+                mv.llamar(binding.ptNumero.getText().toString());
             }
         });
 
